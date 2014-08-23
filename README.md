@@ -7,7 +7,7 @@ The application showcases the use and integration of the following technologies:
 
 * Asp.Net MVC5
 * Asp.Net Web Api 2
-* OWIN Token based athentication using OWIN and Asp.Net Identity
+* OWIN Token based athentication using OWIN and Asp.Net Identity with CORS (Cross Orgin Resource Sharing) support
 * Entity Framework 6.1
 * Jquery, Javascript
 * SignalR for real time notifications and updates
