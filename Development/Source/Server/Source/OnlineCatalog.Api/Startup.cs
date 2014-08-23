@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;
 using OnlineCatalog.Api.Providers;
 using OnlineCatalog.Data.Core;
@@ -21,6 +22,7 @@ namespace OnlineCatalog.Api
 
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
+            app.UseCors(CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 
