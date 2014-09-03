@@ -1,0 +1,21 @@
+﻿<h1>Login to your Shoppers Stop account</h1>
+<form role="form">
+    <div class="alert alert-danger" ng-hide="message ==''">
+        {{message}}
+    </div>
+
+    <div class="form-group">
+        <input type="email" placeholder="enter your username" class="form-control" ng-model="authData.username" required autofocus />
+    </div>
+    <div class="form-group">
+        <input type="password" placeholder="enter your password" class="form-control" ng-model="authData.password" required />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" ng-click="authenticate()">
+            <span class="fa fa-sign-in"></span> Sign in
+        </button>
+        <button class="btn btn-primary" type="reset">
+            <span class="fa fa-refresh"></span> Clear
+        </button>
+    </div>
+</form>
