@@ -96,6 +96,10 @@
       <Project>{71b04f9b-edc1-40f4-91f0-e596ff582c83}</Project>
       <Name>OnlineCatalog.Data.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineCatalog.Infrastructure\OnlineCatalog.Infrastructure.csproj">
+      <Project>{dbc79ab5-2697-4c28-992d-464b1be52818}</Project>
+      <Name>OnlineCatalog.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{d846eac8-c69a-42db-b1ee-cf6036a3a958}</Project>
       <Name>Repository</Name>

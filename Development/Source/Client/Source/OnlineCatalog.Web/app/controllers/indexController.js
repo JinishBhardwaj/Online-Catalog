@@ -1,9 +1,9 @@
 ﻿'use strict';
-myApp.controller('indexController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+myApp.controller('indexController', ['$scope', 'navigationService', 'authService', function ($scope, navigationService, authService) {
     $scope.authentication = authService.authentication;
 
     $scope.logout = function () {
         authService.logout();
-        $location.path = "/index";
+        navigationService.navigate('/index', 0);
     };
 }]);

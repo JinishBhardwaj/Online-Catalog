@@ -1,0 +1,51 @@
+﻿<div class="col-md-12">
+    <h1>Register for a new account with Shoppers Stop</h1>
+</div>
+
+<form role="form">
+    <div class="col-md-12">
+        <div ng-class="success ? 'alert alert-success' : 'alert alert-danger'" ng-hide="message ==''">
+            {{message}}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <input class="form-control" type="email" placeholder="enter your email" ng-model="registrationData.email" required autofocus />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" placeholder="enter your password" ng-model="registrationData.password" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="enter your firstname" ng-model="registrationData.firstname" required />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="enter your lastname" ng-model="registrationData.lastname" required />
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="enter your address" ng-model="registrationData.address" required />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="enter your city" ng-model="registrationData.city" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="enter your pincode" ng-model="registrationData.pincode" required/>
+        </div>
+        <div class="form-group">
+            <select class="form-control" ng-model="registrationData.provinceId" ng-options="province.id as province.name for province in provinces">
+                <option value="">-- select your province --</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <button class="btn btn-primary" type="submit" ng-click="register()">
+            <span class="fa fa-check"></span> Submit
+        </button>
+        <button class="btn btn-primary" type="reset">
+            <span class="fa fa-refresh"></span> Clear
+        </button>
+    </div>
+</form>

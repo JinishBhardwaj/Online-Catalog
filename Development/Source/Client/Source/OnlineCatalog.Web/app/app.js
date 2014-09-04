@@ -7,6 +7,11 @@ myApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "/app/views/login.html",
             controller: "accountController"
         });
+    $routeProvider
+        .when('/register', {
+            templateUrl: "/app/views/register.html",
+            controller: "signupController"
+        });
     $routeProvider.otherwise({ redirectTo: "/index" });
 }]);
 

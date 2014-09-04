@@ -59,9 +59,12 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\indexController.js" />
+    <Content Include="app\controllers\signupController.js" />
     <Content Include="app\services\authService.js" />
     <Content Include="app\controllers\accountController.js" />
+    <Content Include="app\services\navigationService.js" />
     <Content Include="app\views\login.html" />
+    <Content Include="app\views\register.html" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\bootstrap.css" />
@@ -69,6 +72,7 @@
     <Content Include="content\font-awesome.css" />
     <Content Include="content\font-awesome.min.css" />
     <Content Include="content\loading-bar.css" />
+    <Content Include="content\site.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Index.html" />

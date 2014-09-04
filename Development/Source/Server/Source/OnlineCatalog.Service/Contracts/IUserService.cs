@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 using OnlineCatalog.Data.Model;
 
 namespace OnlineCatalog.Service.Contracts
@@ -7,5 +8,6 @@ namespace OnlineCatalog.Service.Contracts
     {
         Task<User> FindUser(string username, string password);
         Task<string> GetUserRole(string id);
+        Task<IdentityResult> CreateUser(User user, string password);
     }
 }

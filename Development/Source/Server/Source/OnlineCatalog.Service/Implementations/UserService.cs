@@ -1,8 +1,11 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using OnlineCatalog.Data.Model;
+using OnlineCatalog.Infrastructure.Enums;
+using OnlineCatalog.Infrastructure.Helpers;
 using OnlineCatalog.Service.Contracts;
 using OnlineCatalog.Service.Identity;
 using Repository.Persistence;
@@ -68,6 +71,23 @@ namespace OnlineCatalog.Service.Implementations
                 return role.FirstOrDefault();
             }
             return string.Empty;
+        }
+
+        /// <summary>
+        /// Creates a new user in the system
+        /// </summary>
+        /// <param name="user">User to create</param>
+        /// <param name="password">Users password</param>
+        /// <returns></returns>
+        public async Task<IdentityResult> CreateUser(User user, string password)
+        {
+            var result = await UserManager.CreateAsync(user, password);
+            if (result.Succeeded)
+            {
+                var role = EnumHelper.Name<RoleType>(RoleType.User);
+                result = await UserManager.AddToRoleAsync(user.Id, role);
+            }
+            return result;
         }
 
         #endregion
